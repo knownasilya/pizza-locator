@@ -1,6 +1,6 @@
 import choo from 'choo';
 import stores from './stores';
-debugger;
+
 const app = choo();
 
 app.model({
