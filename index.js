@@ -1,29 +1,22 @@
 import choo from 'choo';
-
+import stores from './stores';
+debugger;
 const app = choo();
 
 app.model({
-  namespace: 'input',
+  namespace: 'stores',
   state: {
-    title: 'my demo app'
-  },
-  reducers: {
-    update: (action, state) => ({ title: action.payload })
-  },
-  effects: {
-    update: (action, state, send) => (document.title = action.payload)
+    all: stores
   }
 });
 
 const mainView = (params, state, send) => {
+  var allStores = state.stores.all;
   return choo.view`
     <main class="app">
-      <h1>${state.input.title}</h1>
-      <label>Set the title</label>
-      <input
-        type="text"
-        placeholder=${state.input.title}
-        oninput=${(e) => send('input:update', { payload: e.target.value })}>
+      <ul>
+        ${allStores.map(item => choo.view`<li>${item.name}</li>`)}
+      </ul>
     </main>
   `;
 };

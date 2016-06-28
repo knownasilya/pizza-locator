@@ -1,0 +1,920 @@
+[
+  {
+    "name": "Frankie Johnnie & Luigo Too",
+    "address": "939 W El Camino Real, Mountain View, CA",
+    "lat": 37.386339,
+    "lng": -122.085823
+  },
+  {
+    "name": "Amici's East Coast Pizzeria",
+    "address": "790 Castro St, Mountain View, CA",
+    "lat": 37.38714,
+    "lng": -122.083235
+  },
+  {
+    "name": "Kapp's Pizza Bar & Grill",
+    "address": "191 Castro St, Mountain View, CA",
+    "lat": 37.393885,
+    "lng": -122.078916
+  },
+  {
+    "name": "Round Table Pizza: Mountain View",
+    "address": "570 N Shoreline Blvd, Mountain View, CA",
+    "lat": 37.402653,
+    "lng": -122.079354
+  },
+  {
+    "name": "Tony & Alba's Pizza & Pasta",
+    "address": "619 Escuela Ave, Mountain View, CA",
+    "lat": 37.394011,
+    "lng": -122.095528
+  },
+  {
+    "name": "Oregano's Wood-Fired Pizza",
+    "address": "4546 El Camino Real, Los Altos, CA",
+    "lat": 37.401724,
+    "lng": -122.114646
+  },
+  {
+    "name": "Round Table Pizza: Sunnyvale-Mary-Central Expy",
+    "address": "415 N Mary Ave, Sunnyvale, CA",
+    "lat": 37.390038,
+    "lng": -122.042034
+  },
+  {
+    "name": "Giordano's",
+    "address": "730 N Rush St, Chicago, IL",
+    "lat": 41.895729,
+    "lng": -87.625411
+  },
+  {
+    "name": "Filippi's Pizza Grotto",
+    "address": "1747 India St, San Diego, CA",
+    "lat": 32.723831,
+    "lng": -117.168326
+  },
+  {
+    "name": "Pizzeria Paradiso",
+    "address": "2029 P St NW, Washington, DC",
+    "lat": 38.90965,
+    "lng": -77.0459
+  },
+  {
+    "name": "Tutta Bella Neapolitan Pizzera",
+    "address": "4918 Rainier Ave S, Seattle, WA",
+    "lat": 47.557704,
+    "lng": -122.284985
+  },
+  {
+    "name": "Touche Pasta Pizza Pool",
+    "address": "1425 NW Glisan St, Portland, OR",
+    "lat": 45.526465,
+    "lng": -122.68558
+  },
+  {
+    "name": "Piecora's New York Pizza",
+    "address": "1401 E Madison St, Seattle, WA",
+    "lat": 47.614005,
+    "lng": -122.313985
+  },
+  {
+    "name": "Pagliacci Pizza",
+    "address": "550 Queen Anne Ave N, Seattle, WA",
+    "lat": 47.623942,
+    "lng": -122.356719
+  },
+  {
+    "name": "Zeeks Pizza - Phinney Ridge",
+    "address": "6000 Phinney Ave N, Seattle, WA",
+    "lat": 47.67267,
+    "lng": -122.354092
+  },
+  {
+    "name": "Old Town Pizza",
+    "address": "226 NW Davis St, Portland, OR",
+    "lat": 45.524557,
+    "lng": -122.67268
+  },
+  {
+    "name": "Zeeks Pizza - Belltown",
+    "address": "419 Denny Way, Seattle, WA",
+    "lat": 47.618314,
+    "lng": -122.347998
+  },
+  {
+    "name": "Escape From New York Pizza",
+    "address": "622 NW 23rd Ave, Portland, OR",
+    "lat": 45.527105,
+    "lng": -122.698509
+  },
+  {
+    "name": "Big Fred's Pizza Garden",
+    "address": "1101 S 119th St, Omaha, NE",
+    "lat": 41.248662,
+    "lng": -96.09876
+  },
+  {
+    "name": "Old Chicago",
+    "address": "1111 Harney St, Omaha, NE",
+    "lat": 41.25652,
+    "lng": -95.930683
+  },
+  {
+    "name": "Sgt Peffer's Cafe Italian",
+    "address": "1501 N Saddle Creek Rd, Omaha, NE",
+    "lat": 41.273084,
+    "lng": -95.987816
+  },
+  {
+    "name": "Mama's Pizza",
+    "address": "715 N Saddle Creek Rd, Omaha, NE",
+    "lat": 41.265883,
+    "lng": -95.980682
+  },
+  {
+    "name": "Zio's New York Style Pizzeria",
+    "address": "1213 Howard St, Omaha, NE",
+    "lat": 41.25545,
+    "lng": -95.932022
+  },
+  {
+    "name": "Zio's New York Style Pizzeria",
+    "address": "7834 W Dodge Rd, Omaha, NE",
+    "lat": 41.26325,
+    "lng": -96.0564
+  },
+  {
+    "name": "La Casa Pizzaria",
+    "address": "4432 Leavenworth St, Omaha, NE",
+    "lat": 41.2524,
+    "lng": -95.979578
+  },
+  {
+    "name": "Lou Malnati's Pizzeria",
+    "address": "439 N Wells St, Chicago, IL",
+    "lat": 41.890346,
+    "lng": -87.633927
+  },
+  {
+    "name": "Piece Restaurant",
+    "address": "1927 W North Ave, Chicago, IL",
+    "lat": 41.910493,
+    "lng": -87.676127
+  },
+  {
+    "name": "Connie's Pizza Inc",
+    "address": "2373 S Archer Ave, Chicago, IL",
+    "lat": 41.849213,
+    "lng": -87.641681
+  },
+  {
+    "name": "Exchequer Restaurant",
+    "address": "226 S Wabash Ave, Chicago, IL",
+    "lat": 41.879189,
+    "lng": -87.626079
+  },
+  {
+    "name": "Coco's By The Falls",
+    "address": "5339 Murray Street, Niagara Falls, Ontario",
+    "lat": 43.083555,
+    "lng": -79.082706
+  },
+  {
+    "name": "Pompei",
+    "address": "1531 W Taylor St, Chicago, IL",
+    "lat": 41.869301,
+    "lng": -87.664779
+  },
+  {
+    "name": "Lynn's Paradise Cafe",
+    "address": "984 Barret Ave, Louisville, KY",
+    "lat": 38.23693,
+    "lng": -85.72854
+  },
+  {
+    "name": "Otto Restaurant Enoteca Pizza",
+    "address": "1 5th Ave, New York, NY",
+    "lat": 40.732161,
+    "lng": -73.996321
+  },
+  {
+    "name": "Grimaldi's",
+    "address": "19 Old Fulton St, Brooklyn, NY",
+    "lat": 40.702515,
+    "lng": -73.993733
+  },
+  {
+    "name": "Lombardi's",
+    "address": "32 Spring St, New York, NY",
+    "lat": 40.721675,
+    "lng": -73.995595
+  },
+  {
+    "name": "John's Pizzeria",
+    "address": "278 Bleecker St, New York, NY",
+    "lat": 40.731706,
+    "lng": -74.003271
+  },
+  {
+    "name": "John's Pizzeria",
+    "address": "260 W 44th St, New York, NY",
+    "lat": 40.758072,
+    "lng": -73.987736
+  },
+  {
+    "name": "Burger Joint",
+    "address": "2175 Broadway, New York, NY",
+    "lat": 40.782398,
+    "lng": -73.981
+  },
+  {
+    "name": "Frank Pepe Pizzeria Napoletana",
+    "address": "157 Wooster St, New Haven, CT",
+    "lat": 41.302803,
+    "lng": -72.917042
+  },
+  {
+    "name": "Adrianne's Pizza Bar",
+    "address": "54 Stone St, New York, NY",
+    "lat": 40.70448,
+    "lng": -74.010137
+  },
+  {
+    "name": "Pizzeria Regina: Regina Pizza",
+    "address": "11 1/2 Thacher St, Boston, MA",
+    "lat": 42.365338,
+    "lng": -71.056832
+  },
+  {
+    "name": "Upper Crust",
+    "address": "20 Charles St, Boston, MA",
+    "lat": 42.356607,
+    "lng": -71.069681
+  },
+  {
+    "name": "Bertucci's Brick Oven Rstrnt",
+    "address": "4 Brookline Pl, Brookline, MA",
+    "lat": 42.331917,
+    "lng": -71.115311
+  },
+  {
+    "name": "Aquitaine",
+    "address": "569 Tremont St, Boston, MA",
+    "lat": 42.343637,
+    "lng": -71.072265
+  },
+  {
+    "name": "Bertucci's Brick Oven Rstrnt",
+    "address": "43 Stanhope St, Boston, MA",
+    "lat": 42.348299,
+    "lng": -71.073249
+  },
+  {
+    "name": "Upper Crust",
+    "address": "286 Harvard St, Brookline, MA",
+    "lat": 42.342856,
+    "lng": -71.122311
+  },
+  {
+    "name": "Bertucci's Brick Oven Rstrnt",
+    "address": "799 Main St, Cambridge, MA",
+    "lat": 42.363259,
+    "lng": -71.09721
+  },
+  {
+    "name": "Bertucci's Brick Oven Rstrnt",
+    "address": "22 Merchants Row, Boston, MA",
+    "lat": 42.359146,
+    "lng": -71.055477
+  },
+  {
+    "name": "Vinnie Van Go-Go's",
+    "address": "317 W Bryan St, Savannah, GA",
+    "lat": 32.081152,
+    "lng": -81.094992
+  },
+  {
+    "name": "Domino's Pizza: Myrtle Beach",
+    "address": "1706 S Kings Hwy # A, Myrtle Beach, SC",
+    "lat": 33.67488,
+    "lng": -78.905143
+  },
+  {
+    "name": "East of Chicago Pizza Company",
+    "address": "3901 North Kings Highway Suite 1, Myrtle Beach, SC",
+    "lat": 33.716097,
+    "lng": -78.855582
+  },
+  {
+    "name": "Villa Tronco Italian Rstrnt",
+    "address": "1213 Blanding St, Columbia, SC",
+    "lat": 34.008048,
+    "lng": -81.036314
+  },
+  {
+    "name": "Mellow Mushroom Pizza Bakers",
+    "address": "11 W Liberty St, Savannah, GA",
+    "lat": 32.074673,
+    "lng": -81.093699
+  },
+  {
+    "name": "Andolinis Pizza",
+    "address": "82 Wentworth St, Charleston, SC",
+    "lat": 32.78233,
+    "lng": -79.934236
+  },
+  {
+    "name": "Mellow Mushroom Pizza Bakers",
+    "address": "259 E Broad St, Athens, GA",
+    "lat": 33.9578,
+    "lng": -83.37466
+  },
+  {
+    "name": "Bucks Pizza of Edisto Beach Inc",
+    "address": "114 Jungle Rd, Edisto Island, SC",
+    "lat": 32.503973,
+    "lng": -80.297947
+  },
+  {
+    "name": "Anthony's Coal Fired Pizza",
+    "address": "2203 S Federal Hwy, Fort Lauderdale, FL",
+    "lat": 26.094671,
+    "lng": -80.136689
+  },
+  {
+    "name": "Giordano's",
+    "address": "12151 S Apopka Vineland Rd, Orlando, FL",
+    "lat": 28.389367,
+    "lng": -81.506222
+  },
+  {
+    "name": "Pizza Rustica",
+    "address": "863 Washington Ave, Miami Beach, FL",
+    "lat": 25.779059,
+    "lng": -80.133107
+  },
+  {
+    "name": "Mama Jennie's Italian Restaurant",
+    "address": "11720 Ne 2nd Ave, North Miami, FL",
+    "lat": 25.882782,
+    "lng": -80.19429
+  },
+  {
+    "name": "Anthony's Coal Fired Pizza",
+    "address": "17901 Biscayne Blvd, Aventura, FL",
+    "lat": 25.941116,
+    "lng": -80.148826
+  },
+  {
+    "name": "Anthony's Coal Fired Pizza",
+    "address": "4527 Weston Rd, Weston, FL",
+    "lat": 26.065395,
+    "lng": -80.362442
+  },
+  {
+    "name": "Mario the Baker Pizza & Italian Restaurant",
+    "address": "13695 W Dixie Hwy, North Miami, FL",
+    "lat": 25.92974,
+    "lng": -80.15609
+  },
+  {
+    "name": "Big Cheese Pizza",
+    "address": "8080 SW 67th Ave, Miami, FL",
+    "lat": 25.696025,
+    "lng": -80.301113
+  },
+  {
+    "name": "Ingleside Village Pizza",
+    "address": "2396 Ingleside Ave, Macon, GA",
+    "lat": 32.85376,
+    "lng": -83.657406
+  },
+  {
+    "name": "Ciao Bella Pizza Da Guglielmo",
+    "address": "29 Highway 98 E, Destin, FL",
+    "lat": 30.395556,
+    "lng": -86.512093
+  },
+  {
+    "name": "Papa John's Pizza",
+    "address": "810 Russell Pkwy, Warner Robins, GA",
+    "lat": 32.593911,
+    "lng": -83.637075
+  },
+  {
+    "name": "Papa John's Pizza: East Central Montgomery",
+    "address": "2525 Madison Ave, Montgomery, AL",
+    "lat": 32.381121,
+    "lng": -86.273035
+  },
+  {
+    "name": "Cici's Pizza",
+    "address": "6268 Atlanta Hwy, Montgomery, AL",
+    "lat": 32.382205,
+    "lng": -86.190675
+  },
+  {
+    "name": "Papa John's Pizza",
+    "address": "1210 E Jackson St, Thomasville, GA",
+    "lat": 30.849129,
+    "lng": -83.963428
+  },
+  {
+    "name": "Papa John's Pizza",
+    "address": "711 N Westover Blvd # G, Albany, GA",
+    "lat": 31.61397,
+    "lng": -84.22308
+  },
+  {
+    "name": "Mellow Mushroom Pizza Bakers",
+    "address": "6100 Veterans Pkwy, Columbus, GA",
+    "lat": 32.532078,
+    "lng": -84.955894
+  },
+  {
+    "name": "Star Pizza",
+    "address": "2111 Norfolk St, Houston, TX",
+    "lat": 29.732452,
+    "lng": -95.411058
+  },
+  {
+    "name": "Star Pizza II",
+    "address": "77 Harvard St, Houston, TX",
+    "lat": 29.770751,
+    "lng": -95.396042
+  },
+  {
+    "name": "Brothers Pizzeria",
+    "address": "1029 Highway 6 N # 100, Houston, TX",
+    "lat": 29.768337,
+    "lng": -95.643594
+  },
+  {
+    "name": "11th Street Cafe Inc",
+    "address": "748 E 11th St, Houston, TX",
+    "lat": 29.790794,
+    "lng": -95.388921
+  },
+  {
+    "name": "California Pizza Kitchen",
+    "address": "1705 Post Oak Blvd # A, Houston, TX",
+    "lat": 29.750172,
+    "lng": -95.461199
+  },
+  {
+    "name": "Collina's Italian Cafe",
+    "address": "3835 Richmond Ave, Houston, TX",
+    "lat": 29.73262,
+    "lng": -95.438964
+  },
+  {
+    "name": "Barry's Pizza & Italian Diner",
+    "address": "6003 Richmond Ave, Houston, TX",
+    "lat": 29.73143,
+    "lng": -95.484382
+  },
+  {
+    "name": "Mario's Seawall Italian Restaurant",
+    "address": "628 Seawall Blvd, Galveston, TX",
+    "lat": 29.304542,
+    "lng": -94.772598
+  },
+  {
+    "name": "Campisi's Egyptian Restaurant",
+    "address": "5610 E Mockingbird Ln, Dallas, TX",
+    "lat": 32.83651,
+    "lng": -96.771781
+  },
+  {
+    "name": "Fat Joe's Pizza Pasta & Bar",
+    "address": "4721 W Park Blvd # 101, Plano, TX",
+    "lat": 33.027055,
+    "lng": -96.788912
+  },
+  {
+    "name": "Saccone's Pizza",
+    "address": "13812 N Highway 183, Austin, TX",
+    "lat": 29.569507,
+    "lng": -97.964663
+  },
+  {
+    "name": "Fireside Pies",
+    "address": "2820 N Henderson Ave, Dallas, TX",
+    "lat": 32.819762,
+    "lng": -96.784148
+  },
+  {
+    "name": "Romeo's",
+    "address": "1500 Barton Springs Rd, Austin, TX",
+    "lat": 30.261526,
+    "lng": -97.760022
+  },
+  {
+    "name": "Sandella's Cafe",
+    "address": "5910 N Macarthur Blvd, Irving, TX",
+    "lat": 32.892002,
+    "lng": -96.961188
+  },
+  {
+    "name": "Mangia Chicago Stuffed Pizza",
+    "address": "3500 Guadalupe St, Austin, TX",
+    "lat": 30.301543,
+    "lng": -97.739112
+  },
+  {
+    "name": "Frank & Angie's",
+    "address": "508 West Ave, Austin, TX",
+    "lat": 30.269393,
+    "lng": -97.750889
+  },
+  {
+    "name": "Pizzeria Bianco",
+    "address": "623 E Adams St, Phoenix, AZ",
+    "lat": 33.449377,
+    "lng": -112.065521
+  },
+  {
+    "name": "Sammy's Woodfired Pizza",
+    "address": "770 4th Ave, San Diego, CA",
+    "lat": 32.713382,
+    "lng": -117.16118
+  },
+  {
+    "name": "Casa Bianca Pizza Pie",
+    "address": "1650 Colorado Blvd, Los Angeles, CA",
+    "lat": 34.139159,
+    "lng": -118.204608
+  },
+  {
+    "name": "Parkway Grill",
+    "address": "510 S Arroyo Pkwy, Pasadena, CA",
+    "lat": 34.137003,
+    "lng": -118.147303
+  },
+  {
+    "name": "California Pizza Kitchen",
+    "address": "330 S Hope St, Los Angeles, CA",
+    "lat": 34.05333,
+    "lng": -118.252683
+  },
+  {
+    "name": "B J's Pizza & Grill",
+    "address": "200 Main St # 101, Huntington Beach, CA",
+    "lat": 33.658058,
+    "lng": -118.001101
+  },
+  {
+    "name": "B J's Restaurant & Brewhouse",
+    "address": "280 S Coast Hwy, Laguna Beach, CA",
+    "lat": 33.54209,
+    "lng": -117.783516
+  },
+  {
+    "name": "Beau Jo's Pizza",
+    "address": "2710 S Colorado Blvd, Denver, CO",
+    "lat": 39.667342,
+    "lng": -104.940708
+  },
+  {
+    "name": "Pasquini's Pizzeria",
+    "address": "1310 S Broadway, Denver, CO",
+    "lat": 39.692824,
+    "lng": -104.987463
+  },
+  {
+    "name": "Fargos Pizza Co",
+    "address": "2910 E Platte Ave, Colorado Springs, CO",
+    "lat": 38.839847,
+    "lng": -104.774423
+  },
+  {
+    "name": "Old Chicago",
+    "address": "1415 Market St, Denver, CO",
+    "lat": 39.748177,
+    "lng": -105.000501
+  },
+  {
+    "name": "Sink",
+    "address": "1165 13th St, Boulder, CO",
+    "lat": 40.00821,
+    "lng": -105.276236
+  },
+  {
+    "name": "Ligori's Pizza & Pasta",
+    "address": "4421 Harrison Blvd, Ogden, UT",
+    "lat": 41.182732,
+    "lng": -111.949199
+  },
+  {
+    "name": "Old Chicago",
+    "address": "1102 Pearl St, Boulder, CO",
+    "lat": 40.017591,
+    "lng": -105.28099
+  },
+  {
+    "name": "Boston's Restaurant & Sports",
+    "address": "620 E Disk Dr, Rapid City, SD",
+    "lat": 44.106938,
+    "lng": -103.205226
+  },
+  {
+    "name": "Chuck E Cheese's Pizza",
+    "address": "100 24th St W # B, Billings, MT",
+    "lat": 45.771355,
+    "lng": -108.57629
+  },
+  {
+    "name": "Space Aliens Grill & Bar",
+    "address": "1304 E Century Ave, Bismarck, ND",
+    "lat": 46.83808,
+    "lng": -100.771734
+  },
+  {
+    "name": "2nd Street Bistro",
+    "address": "123 North 2nd Street, Livingston, MT",
+    "lat": 45.661014,
+    "lng": -110.561422
+  },
+  {
+    "name": "Domino's Pizza",
+    "address": "1524 S Broadway # 1, Minot, ND",
+    "lat": 48.219657,
+    "lng": -101.296037
+  },
+  {
+    "name": "American Classic Pizzeria",
+    "address": "1744 Grand Ave, Billings, MT",
+    "lat": 45.78412,
+    "lng": -108.560205
+  },
+  {
+    "name": "Godfather's Pizza",
+    "address": "905 Main St, Billings, MT",
+    "lat": 45.81508,
+    "lng": -108.470758
+  },
+  {
+    "name": "Papa John's Pizza",
+    "address": "605 Main St, Billings, MT",
+    "lat": 45.810222,
+    "lng": -108.472125
+  },
+  {
+    "name": "Aardvark Pizza & Sub",
+    "address": "304A Caribou St, Banff, AB",
+    "lat": 51.176488,
+    "lng": -115.570751
+  },
+  {
+    "name": "Jasper Pizza Place",
+    "address": "402 Connaught Dr, Jasper, AB",
+    "lat": 52.879085,
+    "lng": -118.079319
+  },
+  {
+    "name": "Odyssey Pizza & Steak House",
+    "address": "3-3814 Bow Trail SW, Calgary, AB",
+    "lat": 51.045233,
+    "lng": -114.141249
+  },
+  {
+    "name": "Basil's Pizza",
+    "address": "2118 33 Avenue SW, Calgary, AB",
+    "lat": 51.023981,
+    "lng": -114.109903
+  },
+  {
+    "name": "Castle Pizza & Donair",
+    "address": "7724 Elbow Drive SW, Calgary, AB",
+    "lat": 50.984497,
+    "lng": -114.08315
+  },
+  {
+    "name": "Santa Lucia Italian Restaurant",
+    "address": "714 8 St, Canmore, AB",
+    "lat": 51.089195,
+    "lng": -115.358733
+  },
+  {
+    "name": "Tops Pizza & Steak House No 3",
+    "address": "7-5602 4 Street NW, Calgary, AB",
+    "lat": 51.101205,
+    "lng": -114.071458
+  },
+  {
+    "name": "Evvia Restaurant",
+    "address": "837 Main St, Canmore, AB",
+    "lat": 51.089177,
+    "lng": -115.361767
+  },
+  {
+    "name": "D&#39;Bronx",
+    "address": "3904 Bell St, Kansas City, MO",
+    "lat": 39.057182,
+    "lng": -94.606105
+  },
+  {
+    "name": "Cicero's Restaurant & Entrtnmt",
+    "address": "6691 Delmar Blvd, St Louis, MO",
+    "lat": 38.656308,
+    "lng": -90.308439
+  },
+  {
+    "name": "Hideaway Pizza",
+    "address": "6616 N Western Ave, Oklahoma City, OK",
+    "lat": 35.539114,
+    "lng": -97.52976
+  },
+  {
+    "name": "Fortel's Pizza Den",
+    "address": "7932 Mackenzie Rd, St Louis, MO",
+    "lat": 38.566441,
+    "lng": -90.320792
+  },
+  {
+    "name": "Hideaway Pizza",
+    "address": "7877 E 51st St, Tulsa, OK",
+    "lat": 36.089897,
+    "lng": -95.889241
+  },
+  {
+    "name": "Farotto's Catering",
+    "address": "9525 Manchester Rd, Webster Groves, MO",
+    "lat": 38.609327,
+    "lng": -90.364435
+  },
+  {
+    "name": "California Pizza Kitchen",
+    "address": "1493 Saint Louis Galleria, St Louis, MO",
+    "lat": 38.633613,
+    "lng": -90.345949
+  },
+  {
+    "name": "D'Bronx",
+    "address": "2450 Grand Blvd # 124, Kansas City, MO",
+    "lat": 39.082723,
+    "lng": -94.58178
+  },
+  {
+    "name": "Giuseppe's Depot Restaurant",
+    "address": "10 S Sierra Madre St, Colorado Springs, CO",
+    "lat": 38.834548,
+    "lng": -104.828297
+  },
+  {
+    "name": "Old Chicago",
+    "address": "1415 Market St, Denver, CO",
+    "lat": 39.748177,
+    "lng": -105.000501
+  },
+  {
+    "name": "Brick Oven Restaurant",
+    "address": "111 E 800 N, Provo, UT",
+    "lat": 40.244493,
+    "lng": -111.656322
+  },
+  {
+    "name": "Zachary's Chicago Pizza",
+    "address": "5801 College Ave, Oakland, CA",
+    "lat": 37.846179,
+    "lng": -122.251951
+  },
+  {
+    "name": "Zachary's Chicago Pizza",
+    "address": "1853 Solano Ave, Berkeley, CA",
+    "lat": 37.891407,
+    "lng": -122.27843
+  },
+  {
+    "name": "Cheese Board Pizza",
+    "address": "1512 Shattuck Ave, Berkeley, CA",
+    "lat": 37.879976,
+    "lng": -122.269275
+  },
+  {
+    "name": "Goat Hill Pizza",
+    "address": "300 Connecticut St, San Francisco, CA",
+    "lat": 37.762431,
+    "lng": -122.397617
+  },
+  {
+    "name": "Tommaso Ristorante Italiano",
+    "address": "1042 Kearny St, San Francisco, CA",
+    "lat": 37.797388,
+    "lng": -122.405374
+  },
+  {
+    "name": "Little Star Pizza LLC",
+    "address": "846 Divisadero St, San Francisco, CA",
+    "lat": 37.77752,
+    "lng": -122.438215
+  },
+  {
+    "name": "Pauline's Pizza",
+    "address": "260 Valencia, San Francisco, CA",
+    "lat": 37.768725,
+    "lng": -122.422245
+  },
+  {
+    "name": "Villa Romana Pizzeria & Rstrnt",
+    "address": "731 Irving St, San Francisco, CA",
+    "lat": 37.764074,
+    "lng": -122.465581
+  },
+  {
+    "name": "Amici's East Coast Pizzeria",
+    "address": "69 E 3rd Ave, San Mateo, CA",
+    "lat": 37.563896,
+    "lng": -122.32472
+  },
+  {
+    "name": "Amici's East Coast Pizzeria",
+    "address": "226 Redwood Shores Pkwy, Redwood City, CA",
+    "lat": 37.520516,
+    "lng": -122.252255
+  },
+  {
+    "name": "North Beach Pizza",
+    "address": "240 E 3rd Ave, San Mateo, CA",
+    "lat": 37.565325,
+    "lng": -122.322643
+  },
+  {
+    "name": "Patxi's Chicago Pizza",
+    "address": "441 Emerson St, Palo Alto, CA",
+    "lat": 37.445148,
+    "lng": -122.163553
+  },
+  {
+    "name": "Pizz'a Chicago",
+    "address": "4115 El Camino Real, Palo Alto, CA",
+    "lat": 37.414106,
+    "lng": -122.126223
+  },
+  {
+    "name": "California Pizza Kitchen",
+    "address": "531 Cowper St, Palo Alto, CA",
+    "lat": 37.448075,
+    "lng": -122.158813
+  },
+  {
+    "name": "Windy City Pizza",
+    "address": "35 Bovet Rd, San Mateo, CA",
+    "lat": 37.551562,
+    "lng": -122.314525
+  },
+  {
+    "name": "Applewood Pizza 2 Go",
+    "address": "1001 El Camino Real, Menlo Park, CA",
+    "lat": 37.452966,
+    "lng": -122.181722
+  },
+  {
+    "name": "Pizza Antica",
+    "address": "334 Santana Row # 1065, San Jose, CA",
+    "lat": 37.321792,
+    "lng": -121.947735
+  },
+  {
+    "name": "Pizz'a Chicago",
+    "address": "155 W San Fernando St, San Jose, CA",
+    "lat": 37.333277,
+    "lng": -121.891677
+  },
+  {
+    "name": "House of Pizza",
+    "address": "527 S Almaden Ave, San Jose, CA",
+    "lat": 37.326353,
+    "lng": -121.888165
+  },
+  {
+    "name": "Amici's East Coast Pizzeria",
+    "address": "225 W Santa Clara St, San Jose, CA",
+    "lat": 37.334702,
+    "lng": -121.894045
+  },
+  {
+    "name": "Fiorillo's Restaurant",
+    "address": "638 El Camino Real, Santa Clara, CA",
+    "lat": 37.354603,
+    "lng": -121.942577
+  },
+  {
+    "name": "Tony & Alba's Pizza & Pasta",
+    "address": "3137 Stevens Creek Blvd, San Jose, CA",
+    "lat": 37.323297,
+    "lng": -121.951646
+  },
+  {
+    "name": "Giorgio's",
+    "address": "1445 Foxworthy Ave, San Jose, CA",
+    "lat": 37.274648,
+    "lng": -121.892893
+  },
+  {
+    "name": "Round Table Pizza",
+    "address": "4302 Moorpark Ave, San Jose, CA",
+    "lat": 37.315903,
+    "lng": -121.977925
+  }
+]
