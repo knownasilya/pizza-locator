@@ -1,25 +1,51 @@
 import choo from 'choo';
 import stores from './stores';
 import GoogleMap from './components/google-map';
+import SideBar from './components/side-bar';
 
 const app = choo();
+const { computeDistanceBetween } = google.maps.geometry.spherical;
 
 app.model({
   namespace: 'stores',
   state: {
-    all: stores
+    visibleStores: stores,
+    userLocation: { lat: 42.33012354634199, lng: -70.95623016357422 }
+  },
+
+  reducers: {
+    showAll(action, state) {
+      state.visibleStores = stores;
+      return state;
+    },
+
+    updateVisible(action, state) {
+      state.visibleStores = action.payload;
+      return state;
+    }
+  },
+
+  effects: {
+    showClosest(action, state, send) {
+      navigator.geolocation.getCurrentPosition(function(position) {
+        var userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        var closest = stores.map(store => {
+          let distance = computeDistanceBetween(new google.maps.LatLng(store.lat, store.lng), userLocation);
+          store.distance = Math.ceil(distance * 0.000621371);
+          return store;
+        }).filter(store => store.distance < 100);
+        send('stores:updateVisible', { payload: closest });
+      });
+    }
   }
 });
 
 
 const mainView = (params, state, send) => {
-  var allStores = state.stores.all;
   return choo.view`
     <main class="app">
       ${GoogleMap(params, state, send)}
-      <ul>
-        ${allStores.map(item => choo.view`<li>${item.name}</li>`)}
-      </ul>
+      ${SideBar(params, state, send)}
     </main>
   `;
 };

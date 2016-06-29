@@ -1,10 +1,11 @@
 import choo from 'choo';
 import onload from 'on-load';
+import styles from '../map-styles.json';
 
 const { view: html } = choo;
 
 export default function mapView(params, state, send) {
-  let stores = state.stores.all;
+  let stores = state.stores.visibleStores;
   let allMarkers = stores.map(store => {
     return new google.maps.Marker({
       position: { lat: store.lat, lng: store.lng },
@@ -19,14 +20,14 @@ export default function mapView(params, state, send) {
 
   onload(tree, () => {
     let map = new google.maps.Map(tree, {
-      center: { lat: 42.33012354634199, lng: -70.95623016357422 },
-      zoom: 11
+      center: state.stores.userLocation,
+      zoom: 5,
+      styles
     });
 
     allMarkers.forEach(marker => marker.setMap(map));
-
-    state.app.map = map;
+    google.maps.event.trigger(map, 'resize');
   });
 
   return tree;
-};
+}
