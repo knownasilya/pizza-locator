@@ -1,8 +1,10 @@
 import choo from 'choo';
 import naturalSort from 'javascript-natural-sort';
+import async from 'async';
 import stores from './stores';
 import GoogleMap from './components/google-map';
 import SideBar from './components/side-bar';
+import DirectionsPanel from './components/directions-panel';
 
 const app = choo();
 const { computeDistanceBetween } = google.maps.geometry.spherical;
@@ -23,7 +25,8 @@ app.model({
     visibleStores: stores.sort((a, b) => naturalSort(a.name, b.name)),
     userLocation: { lat: 42.33012354634199, lng: -70.95623016357422 },
     location: '',
-    distance: 100
+    distance: 100,
+    directions: false
   },
 
   reducers: {
@@ -40,7 +43,9 @@ app.model({
         }
       });
       state.visibleStores = action.payload;
-      state.userLocation = action.location.toJSON();
+      if (action.location) {
+        state.userLocation = action.location.toJSON();
+      }
       return state;
     },
 
@@ -105,13 +110,30 @@ app.model({
 
 
 const mainView = (params, state, send) => {
+  async.map(state.stores.visibleStores, geocodeStore, function (err, results) {
+    if (err) {
+      return console.warn(err);
+    }
+
+    send('stores:updateVisible', { payload: results });
+  });
+
   return choo.view`
     <main class="app">
       ${GoogleMap(params, state, send)}
+      ${
+          state.stores.directions ? DirectionsPanel(params, state, send) : ''
+      }
       ${SideBar(params, state, send)}
     </main>
   `;
 };
+
+function geocodeStore(store, cb) {
+  geocoder.geocode({ address: store.address }, function (results, status) {
+    cb(status === 'OK' ? undefined : status, results ? results[0].geometry.location : undefined);
+  });
+}
 
 
 app.router((route) => {
