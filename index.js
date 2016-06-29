@@ -5,6 +5,7 @@ import SideBar from './components/side-bar';
 
 const app = choo();
 const { computeDistanceBetween } = google.maps.geometry.spherical;
+const iw = new google.maps.InfoWindow();
 
 app.model({
   namespace: 'stores',
@@ -21,11 +22,19 @@ app.model({
 
     updateVisible(action, state) {
       state.visibleStores = action.payload;
+      state.userLocation = action.location;
       return state;
     }
   },
 
   effects: {
+    select(action, state, send) {
+      var store = action.payload;
+      iw.setPosition({ lat: store.lat, lng: store.lng });
+      iw.setContent(store.name);
+      iw.open(state.map, store.marker);
+    },
+
     showClosest(action, state, send) {
       navigator.geolocation.getCurrentPosition(function(position) {
         var userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
@@ -34,7 +43,7 @@ app.model({
           store.distance = Math.ceil(distance * 0.000621371);
           return store;
         }).filter(store => store.distance < 100);
-        send('stores:updateVisible', { payload: closest });
+        send('stores:updateVisible', { payload: closest, location: userLocation });
       });
     }
   }

@@ -5,29 +5,35 @@ import styles from '../map-styles.json';
 const { view: html } = choo;
 
 export default function mapView(params, state, send) {
-  let stores = state.stores.visibleStores;
-  let allMarkers = stores.map(store => {
-    return new google.maps.Marker({
-      position: { lat: store.lat, lng: store.lng },
-      title: store.name,
-      label: 'P'
-    });
-  });
   let tree = html`
     <google-map>
     </google-map>
   `;
 
   onload(tree, () => {
-    let map = new google.maps.Map(tree, {
-      center: state.stores.userLocation,
-      zoom: 5,
-      styles
-    });
-
-    allMarkers.forEach(marker => marker.setMap(map));
-    google.maps.event.trigger(map, 'resize');
+    loadMap(tree, state);
   });
 
   return tree;
+}
+
+function loadMap(tree, state) {
+  let map = new google.maps.Map(tree, {
+    center: state.stores.userLocation,
+    zoom: 5,
+    styles
+  });
+  let stores = state.stores.visibleStores;
+
+  stores.forEach(store => {
+    store.marker = new google.maps.Marker({
+      position: { lat: store.lat, lng: store.lng },
+      title: store.name,
+      label: 'P'
+    });
+  });
+
+  stores.forEach(store => store.marker.setMap(map));
+  google.maps.event.trigger(map, 'resize');
+  state.stores.map = map;
 }
