@@ -18,6 +18,7 @@ const userMarker = new google.maps.Marker({
     scale: 5
   }
 });
+var geocoded = false;
 
 app.model({
   namespace: 'stores',
@@ -110,13 +111,15 @@ app.model({
 
 
 const mainView = (params, state, send) => {
-  async.map(state.stores.visibleStores, geocodeStore, function (err, results) {
-    if (err) {
-      return console.warn(err);
-    }
-
-    send('stores:updateVisible', { payload: results });
-  });
+  if (!geocoded) {
+    async.map(state.stores.visibleStores, geocodeStore, function (err, results) {
+      if (err) {
+        return console.warn(err);
+      }
+      geocoded = true;
+      send('stores:updateVisible', { payload: results });
+    });
+  }
 
   return choo.view`
     <main class="app">
@@ -130,9 +133,11 @@ const mainView = (params, state, send) => {
 };
 
 function geocodeStore(store, cb) {
-  geocoder.geocode({ address: store.address }, function (results, status) {
-    cb(status === 'OK' ? undefined : status, results ? results[0].geometry.location : undefined);
-  });
+  setTimeout(() => {
+    geocoder.geocode({ address: store.address }, function (results, status) {
+      cb(status === 'OK' ? undefined : status, results && results.length ? results[0].geometry.location : undefined);
+    });
+  }, 50);
 }
 
 
