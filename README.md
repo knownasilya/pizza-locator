@@ -1,6 +1,6 @@
-# app-name
+# pizza-locator
 
-Basic app written using choo.
+Basic Google Maps app for locating pizza restaurants
 
 ## Usage
 
