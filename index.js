@@ -30,6 +30,7 @@ app.model({
   effects: {
     select(action, state, send) {
       var store = action.payload;
+
       iw.setPosition({ lat: store.lat, lng: store.lng });
       iw.setContent(store.name);
       iw.open(state.map, store.marker);
@@ -40,9 +41,11 @@ app.model({
         var userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         var closest = stores.map(store => {
           let distance = computeDistanceBetween(new google.maps.LatLng(store.lat, store.lng), userLocation);
+          // convert meters to miles, rounded up
           store.distance = Math.ceil(distance * 0.000621371);
           return store;
         }).filter(store => store.distance < 100);
+
         send('stores:updateVisible', { payload: closest, location: userLocation });
       });
     }
