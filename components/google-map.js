@@ -35,6 +35,8 @@ function loadMap(tree, state, send) {
   });
 
   stores.forEach(store => store.marker.setMap(map));
-  google.maps.event.trigger(map, 'resize');
+  setTimeout(() => {
+    google.maps.event.trigger(map, 'resize');
+  }, 500);
   state.stores.map = map;
 }

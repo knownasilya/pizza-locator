@@ -22,7 +22,7 @@ app.model({
 
     updateVisible(action, state) {
       state.visibleStores = action.payload;
-      state.userLocation = action.location;
+      state.userLocation = action.location.toJSON();
       return state;
     }
   },
