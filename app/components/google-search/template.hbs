@@ -1,0 +1,42 @@
+<form class="search-group"
+  role="search" {{action 'search' searchQuery on='submit'}} {{action 'toggleResults' on='focusOut'}}>
+  <div class="wrapper">
+    <div class="search-input">
+      {{input type='text'
+        value=searchQuery
+        class='form-control flush'
+        autocomplete='off'
+        focus-in='toggleResults'
+        placeholder=placeholder
+      }}
+
+      {{#if searchQuery}}
+        <i class="icon cancel fa fa-times-circle" {{action 'clearSelected' true true}}></i>
+      {{else}}
+        <i class="icon fa fa-search"></i>
+      {{/if}}
+    </div>
+
+    {{#if showResults}}
+      <ul class="dropdown-menu dropdown-menu-left {{if searchResults.length 'show' 'hidden'}}" role="menu" aria-labelledby="dropdownMenu1">
+        {{#each searchResults as |result|}}
+          <li role="presentation" class="{{if result.isSelected 'is-selected'}}">
+            <a role="menuitem" tabindex="1" title={{result.address}} {{action 'select' result on='mouseDown'}}>
+              {{#if result.icon}}
+                <img src={{result.icon}} with=20 height=20>
+              {{/if}}
+              {{result.address}}
+            </a>
+          </li>
+        {{else}}
+          <li role="presentation">No results</li>
+        {{/each}}
+        <li role="presentation">
+          <a role="menuitem" href="https://google.com">
+            <img src="images/powered_by_google_on_white.png" class="pull-right">
+          </a>
+        </li>
+      </ul>
+    {{/if}}
+  </div>
+</form>

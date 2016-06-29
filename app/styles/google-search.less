@@ -1,0 +1,51 @@
+.component {
+  &.google-search {
+    color: #999;
+
+    input {
+      padding-right: 30px;
+    }
+
+    .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: 10px;
+
+      &.fa-search {
+        cursor: default;
+      }
+
+      &.cancel {
+        cursor: pointer;
+      }
+    }
+
+    input.input-lg + script + .icon {
+      padding: 14px;
+      font-size: 1.3em;
+    }
+
+    .wrapper {
+      position: relative;
+    }
+
+    .dropdown-menu {
+      width: 100%;
+
+      & > li > a {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-left: 7px;
+        padding-right: 7px;
+      }
+
+      .is-selected > a {
+        text-decoration: none;
+        color: #262626;
+        background-color: #F5F5F5;
+      }
+    }
+  }
+}
