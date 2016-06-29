@@ -25,9 +25,9 @@ app.model({
   namespace: 'stores',
   state: {
     visibleStores: stores.sort((a, b) => naturalSort(a.name, b.name)),
-    userLocation: { lat: 42.33012354634199, lng: -70.95623016357422 },
+    userLocation: new google.maps.LatLng(42.33012354634199, -75.95623),
     location: '',
-    distance: 100,
+    distance: 500,
     directions: false
   },
 
@@ -142,6 +142,7 @@ app.model({
 
 
 const mainView = (params, state, send) => {
+/*
   if (!geocoded) {
     async.map(state.stores.visibleStores, geocodeStore, function (err, results) {
       if (err) {
@@ -151,7 +152,7 @@ const mainView = (params, state, send) => {
       send('stores:updateVisible', { payload: results });
     });
   }
-
+*/
   return choo.view`
     <main class="app">
       ${GoogleMap(params, state, send)}
@@ -162,14 +163,14 @@ const mainView = (params, state, send) => {
     </main>
   `;
 };
-
+/*
 function geocodeStore(store, cb) {
   setTimeout(() => {
     geocoder.geocode({ address: store.address }, function (results, status) {
       cb(status === 'OK' ? undefined : status, results && results.length ? results[0].geometry.location : undefined);
     });
   }, 50);
-}
+}*/
 
 
 app.router((route) => {
