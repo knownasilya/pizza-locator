@@ -21,6 +21,11 @@ app.model({
     },
 
     updateVisible(action, state) {
+      state.visibleStores.forEach(store => {
+        if (store.marker) {
+          store.marker.setMap(null);
+        }
+      });
       state.visibleStores = action.payload;
       state.userLocation = action.location.toJSON();
       return state;

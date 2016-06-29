@@ -3,6 +3,13 @@ import onload from 'on-load';
 import styles from '../map-styles.json';
 
 const { view: html } = choo;
+let mapDiv = document.createElement('div');
+mapDiv.classList.add('map-container');
+let map = new google.maps.Map(mapDiv, {
+  center: { lat: 42.33012354634199, lng: -70.95623016357422 },
+  zoom: 5,
+  styles
+});
 
 export default function mapView(params, state, send) {
   let tree = html`
@@ -18,12 +25,8 @@ export default function mapView(params, state, send) {
 }
 
 function loadMap(tree, state, send) {
-  let map = new google.maps.Map(tree, {
-    center: state.stores.userLocation,
-    zoom: 5,
-    styles
-  });
   let stores = state.stores.visibleStores;
+  tree.appendChild(mapDiv);
 
   stores.forEach(store => {
     store.marker = new google.maps.Marker({
