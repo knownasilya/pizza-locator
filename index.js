@@ -22,7 +22,8 @@ app.model({
   state: {
     visibleStores: stores.sort((a, b) => naturalSort(a.name, b.name)),
     userLocation: { lat: 42.33012354634199, lng: -70.95623016357422 },
-    location: ''
+    location: '',
+    distance: 100
   },
 
   reducers: {
@@ -46,6 +47,11 @@ app.model({
     updateLocation(action, state) {
       state.location = action.location;
       return state;
+    },
+
+    updateDistance(action, state) {
+      state.distance = action.payload;
+      return state;
     }
   },
 
@@ -59,6 +65,11 @@ app.model({
     },
 
     showClosest(action, state, send) {
+      if (action.distance) {
+        send('stores:updateDistance', { payload: action.distance });
+        state.distance = action.distance;
+      }
+
       navigator.geolocation.getCurrentPosition(function(position) {
         var userLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
         var closest = stores.map(store => {
@@ -67,7 +78,7 @@ app.model({
           store.distance = Math.ceil(distance * 0.000621371);
           return store;
         })
-          .filter(store => store.distance < 100)
+          .filter(store => store.distance < state.distance)
           .sort((a, b) => naturalSort(a.distance, b.distance));
 
         if (state.map) {

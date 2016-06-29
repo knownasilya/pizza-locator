@@ -29,12 +29,14 @@ function loadMap(tree, state, send) {
   tree.appendChild(mapDiv);
 
   stores.forEach(store => {
-    store.marker = new google.maps.Marker({
-      position: { lat: store.lat, lng: store.lng },
-      title: store.name,
-      label: 'P'
-    });
-    store.marker.addListener('click', () => send('stores:select', { payload: store }));
+    if (!store.marker) {
+      store.marker = new google.maps.Marker({
+        position: { lat: store.lat, lng: store.lng },
+        title: store.name,
+        label: 'P'
+      });
+      store.marker.addListener('click', () => send('stores:select', { payload: store }));
+    }
   });
 
   stores.forEach(store => store.marker.setMap(map));
