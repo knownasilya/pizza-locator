@@ -1,4 +1,5 @@
 import choo from 'choo';
+import naturalSort from 'javascript-natural-sort';
 import stores from './stores';
 import GoogleMap from './components/google-map';
 import SideBar from './components/side-bar';
@@ -10,7 +11,7 @@ const iw = new google.maps.InfoWindow();
 app.model({
   namespace: 'stores',
   state: {
-    visibleStores: stores,
+    visibleStores: stores.sort((a, b) => naturalSort(a.name, b.name)),
     userLocation: { lat: 42.33012354634199, lng: -70.95623016357422 }
   },
 
@@ -37,7 +38,7 @@ app.model({
       var store = action.payload;
 
       iw.setPosition({ lat: store.lat, lng: store.lng });
-      iw.setContent(store.name);
+      iw.setContent(`<b>${store.name}</b><br/>${store.address}`);
       iw.open(state.map, store.marker);
     },
 
@@ -49,7 +50,9 @@ app.model({
           // convert meters to miles, rounded up
           store.distance = Math.ceil(distance * 0.000621371);
           return store;
-        }).filter(store => store.distance < 100);
+        })
+          .filter(store => store.distance < 100)
+          .sort((a, b) => naturalSort(a.distance, b.distance));
 
         send('stores:updateVisible', { payload: closest, location: userLocation });
       });

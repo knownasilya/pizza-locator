@@ -24,6 +24,7 @@
     "choo": "^2.3.0",
     "csjs": "^1.0.4",
     "insert-css": "^0.2.0",
+    "javascript-natural-sort": "^0.7.1",
     "on-load": "^2.2.0",
     "sheetify": "^5.0.3",
     "uglify-js": "^2.4.24",
