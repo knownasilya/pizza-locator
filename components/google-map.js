@@ -11,13 +11,13 @@ export default function mapView(params, state, send) {
   `;
 
   onload(tree, () => {
-    loadMap(tree, state);
+    loadMap(tree, state, send);
   });
 
   return tree;
 }
 
-function loadMap(tree, state) {
+function loadMap(tree, state, send) {
   let map = new google.maps.Map(tree, {
     center: state.stores.userLocation,
     zoom: 5,
@@ -31,6 +31,7 @@ function loadMap(tree, state) {
       title: store.name,
       label: 'P'
     });
+    store.marker.addListener('click', () => send('stores:select', { payload: store }));
   });
 
   stores.forEach(store => store.marker.setMap(map));
