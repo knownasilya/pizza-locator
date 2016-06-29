@@ -13,8 +13,10 @@ export default function sideBarView(params, state, send) {
         ${
           allStores.map(item => {
             return html`
-              <li onclick=${() => send('stores:select', { payload: item })}>
-                ${item.name}${item.distance ? ': ' + item.distance + 'mi' : ''}
+              <li>
+                <a onclick=${() => send('stores:select', { payload: item })}>
+                  ${item.name}${item.distance ? ': ' + item.distance + 'mi' : ''}
+                </a>
               </li>
             `;
           })
