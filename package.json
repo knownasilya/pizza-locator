@@ -5,27 +5,15 @@
   "repository": "https://github.com/knownasilya/store-locator",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production browserify index.js | uglifyjs -cm > bundle.js",
+    "build": "NODE_ENV=production browserify -t [ babelify --presets [ es2015 ] ] index.js | uglifyjs -cm > bundle.js",
     "start": "ecstatic -p 8000 .",
-    "watch": "watchify index.js -o bundle.js -dv"
+    "watch": "watchify -t [ babelify --presets [ es2015 ] ] index.js -o bundle.js -dv"
   },
   "keywords": [
     "choo"
   ],
   "author": "",
   "license": "ISC",
-  "browserify": {
-    "transform": [
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015"
-          ]
-        }
-      ]
-    ]
-  },
   "dependencies": {
     "ecstatic": "^1.4.0"
   },
@@ -34,6 +22,10 @@
     "babelify": "^7.3.0",
     "browserify": "^13.0.0",
     "choo": "^2.3.0",
+    "csjs": "^1.0.4",
+    "insert-css": "^0.2.0",
+    "on-load": "^2.2.0",
+    "sheetify": "^5.0.3",
     "uglify-js": "^2.4.24",
     "watchify": "^3.2.3"
   }

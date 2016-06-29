@@ -1,5 +1,6 @@
 import choo from 'choo';
 import stores from './stores';
+import GoogleMap from './components/google-map';
 
 const app = choo();
 
@@ -10,16 +11,19 @@ app.model({
   }
 });
 
+
 const mainView = (params, state, send) => {
   var allStores = state.stores.all;
   return choo.view`
     <main class="app">
+      ${GoogleMap(params, state, send)}
       <ul>
         ${allStores.map(item => choo.view`<li>${item.name}</li>`)}
       </ul>
     </main>
   `;
 };
+
 
 app.router((route) => {
   return [
