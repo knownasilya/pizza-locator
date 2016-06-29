@@ -10,9 +10,9 @@ export default function mapView(params, state, send) {
     </google-map>
   `;
 
-  onload(tree, () => {
+  //onload(tree, () => {
     loadMap(tree, state, send);
-  });
+  //});
 
   return tree;
 }
