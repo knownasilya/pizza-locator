@@ -6,14 +6,15 @@ const { view: html } = choo;
 let mapDiv = document.createElement('div');
 mapDiv.classList.add('map-container');
 let map = new google.maps.Map(mapDiv, {
-  center: { lat: 42.33012354634199, lng: -70.95623016357422 },
+  center: {lat: 42.25596717322468, lng: -71.16050720214844},
   zoom: 5,
   styles
 });
+global.gmap = map;
 
 export default function mapView(params, state, send) {
   let tree = html`
-    <google-map>
+    <google-map class=${state.stores.directions ? 'small' : ''}>
     </google-map>
   `;
 

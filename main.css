@@ -13,9 +13,25 @@ google-map {
   bottom: 0;
 }
 
+google-map.small {
+  width: 60%;
+}
+
 .map-container {
   width: 100%;
   height: 100%;
+}
+
+directions-panel {
+  display: block;
+  position: absolute;
+  right: 20%;
+  width: 20%;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  padding: 5px;
+  box-sizing: border-box;
 }
 
 side-bar {
@@ -26,4 +42,6 @@ side-bar {
   top: 0;
   right: 0;
   bottom: 0;
+  padding: 5px;
+  box-sizing: border-box;
 }

@@ -10,6 +10,7 @@ const app = choo();
 const { computeDistanceBetween } = google.maps.geometry.spherical;
 const iw = new google.maps.InfoWindow();
 const geocoder = new google.maps.Geocoder();
+const directions = new google.maps.DirectionsService();
 const userMarker = new google.maps.Marker({
   animation: google.maps.Animation.DROP,
   icon: {
@@ -58,6 +59,14 @@ app.model({
     updateDistance(action, state) {
       state.distance = action.payload;
       return state;
+    },
+
+    updateDirections(actions, state) {
+      state.directions = actions.payload;
+      if (!state.directions && state.renderer) {
+        state.renderer.setMap(null);
+      }
+      return state;
     }
   },
 
@@ -66,8 +75,30 @@ app.model({
       var store = action.payload;
 
       iw.setPosition({ lat: store.lat, lng: store.lng });
-      iw.setContent(`<b>${store.name}</b><br/>${store.address}`);
+      iw.setContent(choo.view`
+        <div class='iw'>
+          <b>${store.name}</b><br>
+          ${store.address}<br>
+          <button onclick=${() => send('stores:directions', { store })}>
+            Directions
+          </button>
+        </div>
+      `);
       iw.open(state.map, store.marker);
+    },
+
+    directions(action, state, send) {
+      if (state.renderer) {
+        state.renderer.setMap(null);
+      }
+
+      directions.route({
+        origin: state.userLocation,
+        destination: action.store.marker.position,
+        travelMode: google.maps.TravelMode.DRIVING
+      }, function (results, status) {
+        send('stores:updateDirections', { payload: results });
+      });
     },
 
     showClosest(action, state, send) {
