@@ -1,4 +1,5 @@
 import choo from 'choo';
+import UserLocation from './user-location';
 
 const { view: html } = choo;
 
@@ -7,6 +8,7 @@ export default function sideBarView(params, state, send) {
 
   let tree = html`
     <side-bar>
+      ${UserLocation(params, state, send)}
       <button onclick=${() => send('stores:showAll')}>All Locations</button>
       <button onclick=${() => send('stores:showClosest')}>Closest Locations</button>
       <ul>

@@ -7,17 +7,28 @@ import SideBar from './components/side-bar';
 const app = choo();
 const { computeDistanceBetween } = google.maps.geometry.spherical;
 const iw = new google.maps.InfoWindow();
+const geocoder = new google.maps.Geocoder();
+const userMarker = new google.maps.Marker({
+  animation: google.maps.Animation.DROP,
+  icon: {
+    path: google.maps.SymbolPath.CIRCLE,
+    strokeColor: '#4285f4',
+    scale: 5
+  }
+});
 
 app.model({
   namespace: 'stores',
   state: {
     visibleStores: stores.sort((a, b) => naturalSort(a.name, b.name)),
-    userLocation: { lat: 42.33012354634199, lng: -70.95623016357422 }
+    userLocation: { lat: 42.33012354634199, lng: -70.95623016357422 },
+    location: ''
   },
 
   reducers: {
     showAll(action, state) {
       state.visibleStores = stores;
+      userMarker.setMap(null);
       return state;
     },
 
@@ -29,6 +40,11 @@ app.model({
       });
       state.visibleStores = action.payload;
       state.userLocation = action.location.toJSON();
+      return state;
+    },
+
+    updateLocation(action, state) {
+      state.location = action.location;
       return state;
     }
   },
@@ -54,7 +70,23 @@ app.model({
           .filter(store => store.distance < 100)
           .sort((a, b) => naturalSort(a.distance, b.distance));
 
+        if (state.map) {
+          state.map.panTo(userLocation);
+          state.map.setZoom(10);
+          userMarker.setPosition(userLocation);
+          userMarker.setMap(state.map);
+        }
+
         send('stores:updateVisible', { payload: closest, location: userLocation });
+        send('stores:geocodeLocation');
+      });
+    },
+
+    geocodeLocation(action, state, send) {
+      geocoder.geocode({ location: state.userLocation }, function (results, status) {
+        if (status === 'OK') {
+          send('stores:updateLocation', { location: results[0].formatted_address });
+        }
       });
     }
   }
